@@ -1,0 +1,262 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+
+	<script src=
+"https://code.jquery.com/jquery-3.4.1.slim.min.js">
+	</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+	<link rel="stylesheet" href=
+"https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="ric.css">
+	<script src=
+"https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js">
+	</script>
+    <script src="tic.js"></script>
+	<link rel="stylesheet" href=
+"https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+		integrity=
+"sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+		crossorigin="anonymous">
+
+        <style>
+
+
+
+
+body {
+		background-color: #000000;
+	}
+
+	button {
+		height: 80px;
+		width: 80px;
+		background-color: white;
+		border: 0px transparent;
+		border-radius: 50%;
+		margin: 4px;
+		padding: 4px;
+	}
+
+	.fa {
+		font-size: 48px;
+		color: black;
+	}
+
+	.reset {
+		padding: 8px;
+	}
+
+	.reset:hover {
+		opacity: 0.8;
+	}
+
+
+
+
+
+
+            </style>
+
+</head>
+<script>
+   
+
+
+// Flag variable for checking Turn
+// We'll be modifying our base logic in the
+// next steps as per requirements
+var turn = 1;
+
+$("button").click(function() {
+	if(turn == 1) {
+		$("#screen").text("PLAYER 2 TURN FOLLOWS");
+
+	// Check sign font from font-awesome
+	$(this).addClass("fa fa-check");
+		turn = 2;		
+	}
+	else {
+		$("#screen").text("PLAYER 1 TURN FOLLOWS");
+	
+		// Cross sign font from font-awesome
+		$(this).addClass("fa fa-times");
+		turn = 1;
+	}
+});
+
+
+$("button").click(function() {
+	if($(this).hasClass("fa fa-times") ||
+			$(this).hasClass("fa fa-check"))
+	{	
+		$(this).css("background-color", "red");
+		setTimeout(() => {
+			$(this).css("background-color", "white");
+		}, 800);	
+	}
+});
+
+
+ 
+</script>
+
+<body>
+
+	Heading
+	<div class="container-fluid text-center">
+		<h1 style="color: white;">TIC-TAC-TOE</h1></div>
+	<br>
+	<br>
+	<div class="container-fluid text-center">
+	
+		Inform area for player's turn
+		<h4 id="screen" style="color: white;">
+		PLAYER 1 TURN FOLLOWS
+		</h4>
+	</div>
+	<br>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-4">  </div>
+			<div class="col-lg-4">
+				Playing Canvas
+				<center>
+					<table>
+						<tr>
+							<td colspan="3">
+						</tr>
+						<tr>
+							<td>
+								<button class="sq1 r"></button>
+							</td>
+							<td>
+								<button class="sq2 r"></button>
+							</td>
+							<td>
+								<button class="sq3 r"></button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<button class="sq4 r"></button>
+							</td>
+							<td>
+								<button class="sq5 r"></button>
+							</td>
+							<td>
+								<button class="sq6 r"></button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<button class="sq7 r"></button>
+							</td>
+							<td>
+								<button class="sq8 r"></button>
+							</td>
+							<td>
+								<button class="sq9 r"></button>
+							</td>
+						</tr>
+					</table>
+					<br>
+					<br>
+				
+					Reset button for Game -->
+					<!-- <input type="button"
+						class="reset btn btn-lg btn-danger btn-block"
+						value="RESET" onClick="reset()" />
+				</center>
+			</div>
+			<div class="col-lg-4">  </div>
+		</div>
+	</div>
+</body>
+
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+	
+<head>
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+	
+	<!-- CSS file Included -->
+	<link rel="stylesheet"
+		type="text/css" href="ric.css">
+	
+	<!-- JavaScript file included -->
+	<script src="tic.js"></script>
+</head>
+	
+<body>
+	<div id="main">
+		<h1>TIC TAC TOE</h1>
+	
+		<!-- Game Instructions -->
+		<p id="ins">Game starts by just Tap on
+			box<br><br>First Player starts as
+			<b>Player X</b><br>And<br>Second
+			Player as <b>Player 0</b>
+		</p>
+
+
+	
+	
+		<br><br>
+		<!-- 3*3 grid of Boxes -->
+		<input type="text" id="b1" onclick=
+			"myfunc_3(); myfunc();" readonly>
+	
+		<input type="text" id="b2" onclick=
+			"myfunc_4(); myfunc();" readonly>
+	
+		<input type="text" id="b3" onclick=
+			"myfunc_5(); myfunc();" readonly>
+		<br><br>
+	
+		<input type="text" id="b4" onclick=
+			"myfunc_6(); myfunc();" readonly>
+				
+		<input type="text" id="b5" onclick=
+			"myfunc_7(); myfunc();" readonly>
+	
+		<input type="text" id="b6" onclick=
+			"myfunc_8(); myfunc();" readonly>
+		<br><br>
+	
+		<input type="text" id="b7" onclick=
+			"myfunc_9(); myfunc();" readonly>
+	
+		<input type="text" id="b8" onclick=
+			"myfunc_10();myfunc();" readonly>
+	
+		<input type="text" id="b9" onclick=
+			"myfunc_11();myfunc();" readonly>
+	
+		<!-- Grid end here -->
+		<br><br><br>
+		<!-- Button to reset game -->
+		<button id="but" onclick="myfunc_2()">
+			RESET
+		</button>
+	
+		<br><br>
+		<!-- Space to show player turn -->
+		<p id="print"></p>
+
+
+	
+	
+	</div>
+</body>
+	
+</html>
+
