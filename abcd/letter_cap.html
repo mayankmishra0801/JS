@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="ab"></p>
+    <script>
+
+
+var inputStr = prompt("Enter string to capitalize")
+
+const firstLetterCapital = (str)=>{
+    var newStr = str.split(" ")
+    var newArr = newStr.map((value)=>{
+        return value.charAt(0).toUpperCase() + value.slice(1);
+    })
+    // return newArr.join(" ");
+    return newArr.join(" ");
+}
+
+
+
+// console.log(firstLetterCapital)
+ document.getElementById('ab').innerHTML=  firstLetterCapital(inputStr);
+
+
+        </script>
+</body>
+</html>
